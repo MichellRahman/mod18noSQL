@@ -4,6 +4,8 @@ const port = 3000
 const connectDB = require('./connection')
 
 const routes = require('./routes')
+app.use(express.json())
+
 connectDB()
 
 app.use('/api', routes)
